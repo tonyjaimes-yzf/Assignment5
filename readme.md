@@ -15,3 +15,8 @@ if (o == null || getClass() != o.getClass()) return false;
 But I was not able to figure out how to test both branches of:
 if (this == o) return true;
 I tried writing up several different tests to test the "false" branch, but I was not able to figure it out. In the end, I managed to get 91% 11/12 branch coverage.
+
+-------------
+
+Part 2
+[![SE333_CI](https://github.com/tonyjaimes-yzf/Assignment5/actions/workflows/SE333_CI.yml/badge.svg)](https://github.com/tonyjaimes-yzf/Assignment5/actions/workflows/SE333_CI.yml)
