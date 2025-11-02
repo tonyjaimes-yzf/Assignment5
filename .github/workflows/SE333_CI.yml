@@ -22,7 +22,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Run Checkstyle
-        run: mvn checkstyle:check || true
+        run: mvn checkstyle:checkstyle || true
 
       - name: Upload Checkstyle Result
         uses: actions/upload-artifact@v4
