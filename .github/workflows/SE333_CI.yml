@@ -19,16 +19,19 @@ jobs:
           architecture: x64
 
       - name: Install Linter
-        ##TODO
+        run: mvn clean install -DskipTests
 
       - name: Run Checkstyle
-        ##TODO
+        run: mvn checkstyle:check || true
 
       - name: Upload Checkstyle Result
-        ##TODO
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkstyle-report
+          path: target/site/checkstyle.html
 
       - name: Run Maven Test
-        ##TODO
+        run: mvn clean test
 
       - name: Jacoco Report
-        ##TODO
+        run: mvn jacoco:report
